@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campamento 2026</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* LOADER */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      font-size: 20px;
+    }
+
+    /* TARJETAS */
+    .card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* FUEGO TEXTO */
+    .fire {
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00);
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: fireAnim 2s infinite;
+    }
+
+    @keyframes fireAnim {
+      0% { filter: brightness(1); }
+      50% { filter: brightness(1.8); }
+      100% { filter: brightness(1); }
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+
+<!-- LOADER -->
+<div id="loader">🔥 Preparando experiencia...</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/504XXXXXXXX" target="_blank"
+class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full z-50 hover:scale-110 transition">
+📲
+</a>
+
+<!-- PARTICLES -->
+<div id="tsparticles" class="fixed inset-0 -z-10"></div>
+
+<!-- HERO -->
+<section class="h-screen bg-cover bg-center flex items-center justify-center text-center px-4"
+style="background-image: url('campa.jpg');">
+
+<div class="bg-black/60 absolute inset-0"></div>
+
+<div class="relative z-10" data-aos="fade-up">
+<h1 class="text-4xl sm:text-6xl font-bold mb-4 fire">
+El Espíritu Santo y Yo 2026
+</h1>
+
+<p class="mb-6">02, 03 y 04 de abril · Campamento Bagope</p>
+
+<a href="#info">
+<button class="bg-white text-black px-6 py-3 rounded-full hover:scale-110 transition">
+Ver información
+</button>
+</a>
+</div>
+</section>
+
+<!-- INFO -->
+<section id="info" class="py-20 px-4 text-center">
+
+<h2 class="text-3xl mb-10" data-aos="fade-up">Información del Campamento</h2>
+
+<!-- DATOS -->
+<div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
+<div class="card">📅 02-04 Abril</div>
+<div class="card">📍 Bagope</div>
+<div class="card">🔥 Eres Mi Plenitud</div>
+</div>
+
+<!-- EXPERIENCIA -->
+<h3 class="text-3xl mb-10" data-aos="fade-up">¿Qué vas a vivir?</h3>
+
+<div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
+<div class="card">🔥 Encuentros reales con Dios</div>
+<div class="card">🙏 Ministración</div>
+<div class="card">🤝 Conexión con jóvenes</div>
+</div>
+
+<!-- PREDICADORES -->
+<h3 class="text-3xl mb-6" data-aos="fade-up">Predicadores</h3>
+
+<div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
+<div class="card">Pastor Juan</div>
+<div class="card">Pastora María</div>
+<div class="card">Evangelista Luis</div>
+</div>
+
+<!-- HORARIOS -->
+<h3 class="text-3xl mb-6" data-aos="fade-up">Horarios</h3>
+
+<div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
+<div class="card">Día 1: Llegada / Culto / Vigilia</div>
+<div class="card">Día 2: Devocional / Enseñanza</div>
+<div class="card">Día 3: Cierre</div>
+</div>
+
+<!-- QUE LLEVAR -->
+<h3 class="text-3xl mb-10" data-aos="fade-up">¿Qué debes llevar?</h3>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
+<div class="card">📖 Biblia</div>
+<div class="card">👕 Ropa</div>
+<div class="card">🧼 Higiene</div>
+<div class="card">🔥 Expectativa</div>
+</div>
+
+<!-- UBICACION -->
+<h3 class="text-3xl mb-6" data-aos="fade-up">Ubicación</h3>
+
+<a href="https://maps.google.com" target="_blank">
+<button class="bg-white text-black px-6 py-3 rounded-full hover:scale-110 transition mb-16">
+Ver ubicación 📍
+</button>
+</a>
+
+<!-- MENSAJE -->
+<div class="max-w-2xl mx-auto mb-16" data-aos="fade-up">
+<p class="text-lg text-gray-300 italic">
+"No será un campamento más… será un antes y un después en tu vida."
+</p>
+</div>
+
+</section>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<script>
+// LOADER
+window.onload = () => {
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+  }, 1500);
+};
+
+// PARTICLES
+tsParticles.load("tsparticles", {
+  particles: {
+    number: { value: 40 },
+    move: { enable: true, speed: 1 }
+  }
+});
+</script>
+
+</body>
+</html>

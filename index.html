@@ -12,7 +12,6 @@
   <style>
     html { scroll-behavior: smooth; }
 
-    /* LOADER */
     #loader {
       position: fixed;
       inset: 0;
@@ -24,7 +23,6 @@
       font-size: 20px;
     }
 
-    /* TARJETAS */
     .card {
       background: rgba(255,255,255,0.1);
       backdrop-filter: blur(10px);
@@ -38,7 +36,6 @@
       background: rgba(255,255,255,0.2);
     }
 
-    /* FUEGO TEXTO */
     .fire {
       background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00);
       -webkit-background-clip: text;
@@ -56,19 +53,15 @@
 
 <body class="bg-black text-white overflow-x-hidden">
 
-<!-- LOADER -->
 <div id="loader">🔥 Preparando experiencia...</div>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/504XXXXXXXX" target="_blank"
 class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full z-50 hover:scale-110 transition">
 📲
 </a>
 
-<!-- PARTICLES -->
 <div id="tsparticles" class="fixed inset-0 -z-10"></div>
 
-<!-- HERO -->
 <section class="h-screen bg-cover bg-center flex items-center justify-center text-center px-4"
 style="background-image: url('campa.jpg');">
 
@@ -89,19 +82,16 @@ Ver información
 </div>
 </section>
 
-<!-- INFO -->
 <section id="info" class="py-20 px-4 text-center">
 
 <h2 class="text-3xl mb-10" data-aos="fade-up">Información del Campamento</h2>
 
-<!-- DATOS -->
 <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
 <div class="card">📅 02-04 Abril</div>
 <div class="card">📍 Bagope</div>
 <div class="card">🔥 Eres Mi Plenitud</div>
 </div>
 
-<!-- EXPERIENCIA -->
 <h3 class="text-3xl mb-10" data-aos="fade-up">¿Qué vas a vivir?</h3>
 
 <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
@@ -110,35 +100,102 @@ Ver información
 <div class="card">🤝 Conexión con jóvenes</div>
 </div>
 
-<!-- PREDICADORES -->
 <h3 class="text-3xl mb-6" data-aos="fade-up">Predicadores</h3>
 
 <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
-<div class="card">Pastor Juan</div>
-<div class="card">Pastora María</div>
-<div class="card">Evangelista Luis</div>
+
+<div class="card cursor-pointer" onclick="abrirFoto('Suazo.jpeg')">
+Pastor José A. Suazo
 </div>
 
-<!-- HORARIOS -->
-<h3 class="text-3xl mb-6" data-aos="fade-up">Horarios</h3>
-
-<div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
-<div class="card">Día 1: Llegada / Culto / Vigilia</div>
-<div class="card">Día 2: Devocional / Enseñanza</div>
-<div class="card">Día 3: Cierre</div>
+<div class="card cursor-pointer" onclick="abrirFoto('PastoraLinda.jpeg')">
+Profeta Rosalinda Amaya
 </div>
 
-<!-- QUE LLEVAR -->
+<div class="card cursor-pointer" onclick="abrirFoto('Nelson.jpeg')">
+Pastor Nelson Colindres
+</div>
+
+<div class="card cursor-pointer" onclick="abrirFoto('samy.jpeg')">
+Pastor Samy Ramírez
+</div>
+
+<div class="card cursor-pointer" onclick="abrirFoto('Alfredo.jpeg')">
+Pastor Alfredo Mendoza
+</div>
+
+<div class="card cursor-pointer" onclick="abrirFoto('Antunez.jpeg')">
+Pastor David Antúnez
+</div>
+
+</div>
+
+<!-- PROGRAMA COMPLETO -->
+<h3 class="text-3xl mb-10" data-aos="fade-up">Programa Completo</h3>
+
+<div class="max-w-6xl mx-auto space-y-10 text-left">
+
+  <div class="card" data-aos="fade-up">
+    <h4 class="text-2xl mb-4 font-bold fire">Jueves 02 de Abril</h4>
+    <ul class="space-y-2 text-gray-200">
+      <li>8:00 AM - Salida de Ministerio Hebreos</li>
+      <li>11:00 AM - Llegada e instalación</li>
+      <li>12:00 PM - Almuerzo</li>
+      <li>2:00 PM - Apertura / Alabanza</li>
+      <li>2:30 PM - Conferencia 1</li>
+      <li>3:10 PM - Conferencia 2</li>
+      <li>3:50 PM - Conferencia 3</li>
+      <li>5:00 PM - Aseo personal</li>
+      <li>6:00 PM - Cena</li>
+      <li>7:30 PM - Culto especial</li>
+      <li>Conferencia 4</li>
+    </ul>
+  </div>
+
+  <div class="card" data-aos="fade-up">
+    <h4 class="text-2xl mb-4 font-bold fire">Viernes 03 de Abril</h4>
+    <ul class="space-y-2 text-gray-200">
+      <li>5:00 AM - Oración matutina</li>
+      <li>6:00 AM - Aseo personal</li>
+      <li>7:00 AM - Desayuno</li>
+      <li>8:00 AM - Alabanza y adoración</li>
+      <li>8:30 AM - Conferencia 5</li>
+      <li>9:10 AM - Conferencia 6</li>
+      <li>9:50 AM - Conferencia 7</li>
+      <li>10:30 AM - Conferencia 8</li>
+      <li>11:10 AM - Ministración</li>
+      <li>12:00 PM - Almuerzo</li>
+      <li>1:30 PM - Juegos y competencias</li>
+      <li>3:00 PM - Tiempo libre</li>
+      <li>5:00 PM - Aseo personal</li>
+      <li>6:00 PM - Cena</li>
+      <li>7:30 PM - Culto de Avivamiento</li>
+    </ul>
+  </div>
+
+  <div class="card" data-aos="fade-up">
+    <h4 class="text-2xl mb-4 font-bold fire">Sábado 04 de Abril</h4>
+    <ul class="space-y-2 text-gray-200">
+      <li>6:00 AM - Desayuno</li>
+      <li>7:00 AM - Oración y despedida</li>
+      <li>8:00 AM - Aseo del campamento</li>
+      <li>9:00 AM - Salida a Los Naranjos</li>
+      <li>9:00 AM - 12:00 PM - Kayak</li>
+      <li>12:30 PM - Regreso a Choloma</li>
+    </ul>
+  </div>
+
+</div>
+
 <h3 class="text-3xl mb-10" data-aos="fade-up">¿Qué debes llevar?</h3>
 
 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
 <div class="card">📖 Biblia</div>
 <div class="card">👕 Ropa</div>
-<div class="card">🧼 Higiene</div>
+<div class="card">Corazon Dispuesto</div>
 <div class="card">🔥 Expectativa</div>
 </div>
 
-<!-- UBICACION -->
 <h3 class="text-3xl mb-6" data-aos="fade-up">Ubicación</h3>
 
 <a href="https://maps.google.com" target="_blank">
@@ -147,7 +204,6 @@ Ver ubicación 📍
 </button>
 </a>
 
-<!-- MENSAJE -->
 <div class="max-w-2xl mx-auto mb-16" data-aos="fade-up">
 <p class="text-lg text-gray-300 italic">
 "No será un campamento más… será un antes y un después en tu vida."
@@ -156,24 +212,39 @@ Ver ubicación 📍
 
 </section>
 
-<!-- SCRIPTS -->
+<!-- MODAL -->
+<div id="modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+  <img id="modalImg" src="" class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl">
+</div>
+
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>AOS.init();</script>
 
 <script>
-// LOADER
 window.onload = () => {
   setTimeout(() => {
     document.getElementById("loader").style.display = "none";
   }, 1500);
 };
 
-// PARTICLES
 tsParticles.load("tsparticles", {
   particles: {
     number: { value: 40 },
     move: { enable: true, speed: 1 }
   }
+});
+
+// MODAL FUNCION
+function abrirFoto(src) {
+  const modal = document.getElementById("modal");
+  const img = document.getElementById("modalImg");
+  img.src = src;
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+}
+
+document.getElementById("modal").addEventListener("click", () => {
+  document.getElementById("modal").classList.add("hidden");
 });
 </script>
 
